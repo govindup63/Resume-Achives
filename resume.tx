@@ -1,0 +1,217 @@
+%------------------------
+% Resume Template
+% Author : Govind Pandey
+% Github : https://github.com/govindup63
+% License : DSCE
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={blue!50!black},
+    urlcolor={black}
+}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspace{-10pt}\scshape\raggedright\large
+}{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
+
+% Ensure that generate pdf is machine readable/ATS parsable
+\pdfgentounicode=1
+
+%-------------------------
+% Custom commands
+\newcommand{\resumeItem}[1]{
+  \item\small{
+    {#1 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\classesList}[4]{
+    \item\small{
+        {#1 #2 #3 #4 \vspace{-2pt}}
+  }
+}
+
+\newcommand{\resumeSubheading}[4]{
+  \vspace{-2pt}\item
+    \begin{tabular*}{1.0\textwidth}[t]{l@{\extracolsep{\fill}}r}
+      \textbf{#1} & \textbf{\small #2} \\
+      \textit{\small#3} & \textit{\small #4} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubSubheading}[2]{
+    \item
+    \begin{tabular*}{0.97\textwidth}{l@{\extracolsep{\fill}}r}
+      \textit{\small#1} & \textit{\small #2} \\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeProjectHeading}[2]{
+    \item
+    \begin{tabular*}{1.001\textwidth}{l@{\extracolsep{\fill}}r}
+      \small#1 & \textbf{\small #2}\\
+    \end{tabular*}\vspace{-7pt}
+}
+
+\newcommand{\resumeSubItem}[1]{\resumeItem{#1}\vspace{-4pt}}
+
+\renewcommand\labelitemi{$\vcenter{\hbox{\tiny$\bullet$}}$}
+\renewcommand\labelitemii{$\vcenter{\hbox{\tiny$\bullet$}}$}
+
+\newcommand{\resumeSubHeadingListStart}{\begin{itemize}[leftmargin=0.0in, label={}]}
+\newcommand{\resumeSubHeadingListEnd}{\end{itemize}}
+\newcommand{\resumeItemListStart}{\begin{itemize}}
+\newcommand{\resumeItemListEnd}{\end{itemize}\vspace{-5pt}}
+
+
+%-----------------------------
+%%%%%%  CV STARTS HERE  %%%%%%
+
+\begin{document}
+
+%----------HEADING-----------------
+\begin{tabular*}{\textwidth}{l@{\extracolsep{\fill}}r}
+
+
+  \textbf{{\LARGE Govind Pandey}} & Email: \href{mailto:govindup63@gmail.com}{govindup63@gmail.com}\\
+  \underline{\href{https://www.govindpandey.xyz/}{Portfolio}} & \underline{\href{https://www.linkedin.com/in/govind-pandey-1611081b6/}{LinkedIn}} \\
+  \underline{\href{https://github.com/govindup63}{Github: govindup63}} & Mobile:~~~+91-935-104-4614
+\end{tabular*}
+
+\section{Education}
+  \resumeSubHeadingListStart
+    \resumeSubheading
+        {Dayananda Sagar College Of Engineering}{CGPA: 8.95}
+      {Bachelor of Engineering}{2023 - 2027}
+      \vspace{-5pt}
+    \resumeSubHeadingListEnd
+	    
+\vspace{-5pt}
+\section{Technical Skills}
+ \begin{itemize}[leftmargin=0.15in, label={}]
+    \small{\item{
+     \textbf{Languages}{: TypeScript, Golang, Python, JavaScript, Java, C++}
+     
+    \textbf{Technologies/Frameworks}{:  React, Next.js, Express, RestAPI, Go-Cobra (CLI)}
+
+    \textbf{AI/ML}{:  LLM APIs, LangChain, LangGraph, Embeddings, Vector Databases (Pinecone)}
+
+ \textbf{Databases/Storage}{: PostgreSQL (Prisma), MongoDB, Firebase, AWS S3, Cloudinary} 
+
+\textbf{Dev \& Deployment}{:  Docker, Git, NeoVim, Tmux, AWS, Vercel, Render} }
+}
+ \end{itemize}
+ \vspace{-10pt}
+
+%-----------Experience-----------------
+\section{Experience}
+\resumeSubHeadingListStart
+  \resumeSubheading
+{\href{https://cloudsek.com/}{\underline{Point Blank (Coding Club)}}}{November 2024 - Present}
+  {Fullstack Engineer: Nextjs, Firebase, Mongo, Cloudinary, Zustand}{Member}
+  \resumeItemListStart
+  \item Integrated \textbf{MongoDB} and \textbf{Cloudinary} to enable secure photo uploads for members and leads via admin login.
+  \item Implemented \textbf{Infisical} for secret management, enhancing security and protecting sensitive data. 
+  \resumeItemListEnd
+  \vspace{-4pt}
+\resumeSubHeadingListEnd
+
+\vspace{-10pt}
+%-----------PROJECTS-----------------
+
+\section{Projects}
+\resumeSubHeadingListStart
+\resumeSubItem{\textbf{Second Brain} $|$ \emph{Typescript, OpenAi API, Youtube/Twitter API, Embedings, Vector DB}
+$|$
+\textmd{\href{https://github.com/govindup63/second-brain-backend}{\underline{Github}}}
+}{
+\begin{itemize}
+\item Developed an \textbf{AI-powered knowledge management system} that enables \textbf{semantic search} across user-saved content from YouTube, Twitter (X), and web articles using \textbf{embeddings} and a \textbf{Vector database}.
+\item Built a \textbf{web scraping pipeline} utilizing \textbf{YouTube and Twitter APIs} to extract, preprocess, and store multimedia data efficiently.
+\item Integrated \textbf{OpenAI API} to enhance \textbf{natural language search}, enabling users to query their saved content conversationally.
+\item Designed a \textbf{scalable backend architecture} in \textbf{TypeScript}, ensuring efficient \textbf{data ingestion, retrieval, and storage} with an event-driven approach.
+\end{itemize}
+}
+\vspace{-10pt}
+\resumeSubItem{\textbf{Abhaya} (team project) $|$ \emph{Android, JavaScript, Node.js, Express}
+$|$
+\textmd{\href{https://github.com/govindup63/SIH-backend}{\underline{Github}}}
+}{
+\begin{itemize}
+\item Developed a \textbf{women’s safety platform} for \textbf{SIH 2023}, enabling \textbf{real-time location data collection} and \textbf{analysis} to identify high-risk areas.
+\item Built an \textbf{SOS alert system} that sends emergency reports to a \textbf{police dashboard}, ensuring rapid response.
+\item Generated \textbf{heat maps} based on reported incidents to provide \textbf{data-driven safety insights} for users and authorities.
+\end{itemize}
+}
+\vspace{-10pt}
+\resumeSubItem{\textbf{Ascend} (team project) $|$ \emph{LangChain, Nextjs}
+$|$
+\textmd{\href{https://github.com/TusharMohapatra07/Ascend}{\underline{Github}}}
+}{
+\begin{itemize}
+\item Designed an \textbf{AI-powered roadmap generator} that creates a \textbf{customized learning plan} based on user-defined \textbf{goals, outcomes, and timelines}.
+\item Utilized \textbf{Retrieval-Augmented Generation (RAG)} to ensure \textbf{accurate, structured, and adaptive roadmap generation} for skill development.
+\item Provided users with a step-by-step learning \textbf{pathway}, helping them stay on track with their progress.
+\end{itemize}
+}
+\vspace{-10pt}
+\resumeSubItem{\textbf{Course Selling Website} $|$ \emph{Cloudinary, Multer, JavaScript, JWT, Bcrypt}
+$|$
+\textmd{\href{https://github.com/govindup63/coursera-backend}{\underline{Github}}}
+}{
+\begin{itemize}
+\item Developed a \textbf{secure authentication system} using \textbf{JWT and Bcrypt} for \textbf{user and admin login/signup} with hashed credentials.
+\item Integrated \textbf{video upload functionality} for admins via \textbf{Cloudinary and Multer}, allowing them to \textbf{host and manage courses} seamlessly
+\item Implemented a \textbf{course purchasing system}, enabling users to \textbf{buy and access courses} after authentication.
+\end{itemize}
+}
+\vspace{-10pt}
+\resumeSubItem{\textbf{CLI Todo App} $|$ \emph{Golang, Cobra, Deepseek Api}
+$|$
+\textmd{\href{https://github.com/govindup63/Go-Todo}{\underline{Github}}}
+}{
+\begin{itemize}
+\item Built a \textbf{lightweight, terminal-based To-Do app} for quick and efficient \textbf{task management} directly from the command line.
+\item Implemented features like \textbf{task addition, deletion, completion tracking, data persistence, automatic schedule generation} using \textbf{Deepseek} API enhancing usability for developers
+\item Designed a \textbf{minimalistic yet powerful CLI interface} for seamless task organization and productivity.
+\end{itemize}
+}
+\vspace{-10pt}
+
+\resumeSubHeadingListEnd
+\vspace{-10pt}
+
+\end{document}
