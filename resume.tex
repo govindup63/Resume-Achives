@@ -1,50 +1,4 @@
-%------------------------
-% Resume Template
-% Author : Govind Pandey
-% Github : https://github.com/govindup63
-% License : DSCE
-%------------------------
-
-\documentclass[a4paper,11pt]{article}
-
-\usepackage{latexsym}
-\usepackage[empty]{fullpage}
-\usepackage{titlesec}
-\usepackage{marvosym}
-\usepackage[usenames,dvipsnames]{color}
-\usepackage{verbatim}
-\usepackage{enumitem}
-\usepackage[pdftex]{hyperref}
-\usepackage{fancyhdr}
-\usepackage{xcolor}
-\hypersetup{
-    colorlinks,
-    linkcolor={black},
-    citecolor={blue!50!black},
-    urlcolor={black}
-}
-\pagestyle{fancy}
-\fancyhf{} % clear all header and footer fields
-\fancyfoot{}
-\renewcommand{\headrulewidth}{0pt}
-\renewcommand{\footrulewidth}{0pt}
-
-% Adjust margins
-\addtolength{\oddsidemargin}{-0.530in}
-\addtolength{\evensidemargin}{-0.375in}
-\addtolength{\textwidth}{1in}
-\addtolength{\topmargin}{-.45in}
-\addtolength{\textheight}{1in}
-
-\urlstyle{rm}
-
-\raggedbottom
-\raggedright
-\setlength{\tabcolsep}{0in}
-
-% Sections formatting
-\titleformat{\section}{
-  \vspace{-10pt}\scshape\raggedright\large
+e{-10pt}\scshape\raggedright\large
 }{}{0em}{}[\color{black}\titlerule \vspace{-6pt}]
 
 % Ensure that generate pdf is machine readable/ATS parsable
@@ -124,16 +78,17 @@
 \section{Technical Skills}
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
-     \textbf{Languages}{: TypeScript, JavaScript, Golang, Python, C++}
+     % \textbf{Languages}{: TypeScript, JavaScript, Golang, Python, C++}
+    \textbf{Languages}{: TypeScript, JavaScript, Python, C++}
      
-    \textbf{Technologies/Frameworks}{:  React, Next.js, Express, RestAPI, Go-Cobra (CLI)}
+    \textbf{Technologies/Frameworks}{:  React, Next.js, Express, RestAPI}
 
     \textbf{AI/ML}{:  Model Context Protocol (MCP), Embeddings, Vector Databases (Pinecone)}
 
  \textbf{Databases/Storage}{: PostgreSQL (Prisma), MongoDB, Firebase, AWS S3, Cloudinary} 
 
-\textbf{Deployment}{:  Docker, Git, AWS EC2, Vercel, Render} }
-}
+\textbf{DevOps/Deployment}{: Docker, Kubernetes, Terraform, GitHub Actions (ci/cd), AWS EC2, Vercel, Render}
+    }}
  \end{itemize}
  \vspace{-10pt}
 
@@ -141,12 +96,15 @@
 \section{Experience}
 \resumeSubHeadingListStart
 \resumeSubheading
-{\href{https://www.remotestar.io/}{\underline{Remotestar}}}{March 2025 - Present}
-  {Backend Developer: Node.js, MongoDB, Pinecone, AWS EC2}{Internship : Remote}
-  \resumeItemListStart
-    \item Contributing to a new product involving \textbf{semantic search} and \textbf{embedding}-based information retrieval.
-    \item Designed and implemented an embedding-powered \textbf{API} to perform similarity search over unstructured resume data using \textbf{vector database} (\textbf{Pinecone}).
-  \resumeItemListEnd
+{\href{https://www.remotestar.io/}{\underline{Remotestar}}}{March 2025 – Present}
+{Backend and DevOps Intern — Node.js, MongoDB, Pinecone, AWS, Terraform}{Remote}
+\resumeItemListStart
+  \item Built and deployed the entire backend architecture for a semantic search platform using \textbf{Node.js}, \textbf{Express}, and \textbf{MongoDB}.
+  \item Designed and implemented a scalable \textbf{embedding-based search API} leveraging \textbf{Pinecone} vector database for similarity search across unstructured resume data.
+  \item Automated infrastructure provisioning and deployment using \textbf{Terraform}, and deployed microservices to \textbf{AWS ECS} using \textbf{ECR}, \textbf{EC2} and \textbf{Fargate}.
+  \item Followed REST API best practices and ensured reliability through proper error handling, testing, and logging.
+\resumeItemListEnd
+
 \vspace{-4pt}
 
 \resumeSubHeadingListEnd
@@ -228,11 +186,57 @@ $|$
 \resumeSubHeadingListEnd
 \vspace{-10pt}
 %-----------Achievement-----------------
-\section{Achievements}
-\begin{description}[font=$\bullet$]
-\item {Placed 1st Place Among 35 other teams in Technical Escape Room(CTF) - March 2025}
+% \section{Achievements}
+% \begin{description}[font=$\bullet$]
+% \item {Placed 1st Place Among 35 other teams in Technical Escape Room(CTF) - March 2025}
 
-\end{description}
+% \end{description}
 \vspace{-10pt}
 
-\end{document}
+\end{document}%------------------------
+% Resume Template
+% Author : Govind Pandey
+% Github : https://github.com/govindup63
+% License : DSCE
+%------------------------
+
+\documentclass[a4paper,11pt]{article}
+
+\usepackage{latexsym}
+\usepackage[empty]{fullpage}
+\usepackage{titlesec}
+\usepackage{marvosym}
+\usepackage[usenames,dvipsnames]{color}
+\usepackage{verbatim}
+\usepackage{enumitem}
+\usepackage[pdftex]{hyperref}
+\usepackage{fancyhdr}
+\usepackage{xcolor}
+\hypersetup{
+    colorlinks,
+    linkcolor={black},
+    citecolor={blue!50!black},
+    urlcolor={black}
+}
+\pagestyle{fancy}
+\fancyhf{} % clear all header and footer fields
+\fancyfoot{}
+\renewcommand{\headrulewidth}{0pt}
+\renewcommand{\footrulewidth}{0pt}
+
+% Adjust margins
+\addtolength{\oddsidemargin}{-0.530in}
+\addtolength{\evensidemargin}{-0.375in}
+\addtolength{\textwidth}{1in}
+\addtolength{\topmargin}{-.45in}
+\addtolength{\textheight}{1in}
+
+\urlstyle{rm}
+
+\raggedbottom
+\raggedright
+\setlength{\tabcolsep}{0in}
+
+% Sections formatting
+\titleformat{\section}{
+  \vspac
