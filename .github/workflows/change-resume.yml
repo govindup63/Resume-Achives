@@ -26,11 +26,16 @@ jobs:
       - name: Rename Output
         run: mv resume.pdf latest_resume.pdf
 
-      - name: Push to latest-resume branch
+      - name: Move PDF to public folder
+        run: |
+          mkdir public
+          mv latest_resume.pdf public/
+
+      - name: Push to latest-resumes branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./
+          publish_dir: ./public
           publish_branch: latest-resumes
           force_orphan: true
           keep_files: false
