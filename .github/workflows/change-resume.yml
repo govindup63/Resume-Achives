@@ -1,0 +1,33 @@
+name: Build & Publish Latest Resume PDF
+
+on:
+  push:
+    paths:
+      - resume.tex
+    branches:
+      - main
+
+jobs:
+  build-and-publish:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Checkout Repository
+        uses: actions/checkout@v3
+
+      - name: Set up LaTeX
+        uses: xu-cheng/latex-action@v2
+        with:
+          root_file: resume.tex
+
+      - name: Rename Output
+        run: mv resume.pdf latest_resume.pdf
+
+      - name: Push to latest-resume branch
+        uses: peaceiris/actions-gh-pages@v3
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./
+          publish_branch: latest-resume
+          force_orphan: true
+          keep_files: false
