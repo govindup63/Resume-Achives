@@ -42,22 +42,24 @@ jobs:
           publish_branch: latest-resumes
           force_orphan: true
 
-      - name: Archive to archives branch (keep only latest of the day)
+      - name: Archive to archives branch (keep only one for today)
         run: |
           DATE=$(date +'%d-%m-%Y')
           FILENAME="resume_$DATE.pdf"
-
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Clone archives branch into a temp directory
+          # Clone archives branch into temp directory
           git clone --depth 1 --branch archives https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} archive-temp
           cd archive-temp
 
-          # Delete any existing resume for today (if any)
-          git rm -f "resume_$DATE.pdf" > /dev/null 2>&1 || true
+          # Delete any existing file for today
+          if ls resume_$DATE*.pdf 1> /dev/null 2>&1; then
+            echo "Removing old resume(s) from today..."
+            git rm resume_$DATE*.pdf
+          fi
 
-          # Copy latest resume from workspace
+          # Copy new resume
           cp ../latest_resume.pdf "$FILENAME"
           git add "$FILENAME"
           git commit -m "archive: update resume for $DATE"
