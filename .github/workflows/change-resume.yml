@@ -1,41 +1,38 @@
-name: Build & Publish Latest Resume PDF
+name: Build and Deploy Latest Resume
 
 on:
   push:
+    branches: [main]
     paths:
-      - resume.tex
-    branches:
-      - main
-
-permissions:
-  contents: write
+      - "resume.tex"
 
 jobs:
-  build-and-publish:
+  build:
     runs-on: ubuntu-latest
 
     steps:
-      - name: Checkout Repository
+      - name: Checkout code
         uses: actions/checkout@v3
 
-      - name: Set up LaTeX
-        uses: xu-cheng/latex-action@v2
-        with:
-          root_file: resume.tex
+      - name: Install LaTeX
+        run: |
+          sudo apt update
+          sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
 
-      - name: Rename Output
+      - name: Compile LaTeX to PDF
+        run: pdflatex -interaction=nonstopmode resume.tex
+
+      - name: Copy index.html
+        run: |
+          echo '<!DOCTYPE html><html><head><title>Latest Resume</title><meta charset="UTF-8" /><meta name="viewport" content="width=device-width, initial-scale=1.0" /><style>html,body{margin:0;height:100%;background:#f9f9f9}embed{width:100%;height:100%;border:none}</style></head><body><embed src="latest_resume.pdf" type="application/pdf" /></body></html>' > index.html
+
+      - name: Rename PDF
         run: mv resume.pdf latest_resume.pdf
 
-      - name: Move PDF to public folder
-        run: |
-          mkdir public
-          mv latest_resume.pdf public/
-
-      - name: Push to latest-resumes branch
+      - name: Deploy to latest-resumes branch
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./public
+          publish_dir: ./
           publish_branch: latest-resumes
           force_orphan: true
-          keep_files: false
