@@ -19,9 +19,11 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Set up LaTeX
-        uses: xu-cheng/latex-action@v2
+        uses: dante-ev/latex-action@v0.2.0
         with:
           root_file: resume.tex
+          compiler: xelatex
+          args: -interaction=nonstopmode -file-line-error
 
       - name: Rename Output
         run: mv resume.pdf latest_resume.pdf
