@@ -6,6 +6,9 @@ on:
     paths:
       - "resume.tex"
 
+permissions:
+  contents: write  # 🔑 allows pushing to branches using GITHUB_TOKEN
+
 jobs:
   build:
     runs-on: ubuntu-latest
@@ -15,9 +18,13 @@ jobs:
         uses: actions/checkout@v3
 
       - name: Install LaTeX
-        run: |
-          sudo apt update
-          sudo apt install -y texlive-latex-base texlive-latex-recommended texlive-fonts-recommended texlive-latex-extra
+        uses: teatimeguest/setup-texlive-action@v2
+        with:
+          packages: >-
+            latex-base
+            latex-recommended
+            fonts-recommended
+            latex-extra
 
       - name: Compile LaTeX to PDF
         run: |
@@ -49,17 +56,14 @@ jobs:
           git config --global user.name "github-actions[bot]"
           git config --global user.email "github-actions[bot]@users.noreply.github.com"
 
-          # Clone archives branch into temp directory
           git clone --depth 1 --branch archives https://x-access-token:${{ secrets.GITHUB_TOKEN }}@github.com/${{ github.repository }} archive-temp
           cd archive-temp
 
-          # Delete any existing file for today
           if ls resume_$DATE*.pdf 1> /dev/null 2>&1; then
             echo "Removing old resume(s) from today..."
             git rm resume_$DATE*.pdf
           fi
 
-          # Copy new resume
           cp ../latest_resume.pdf "$FILENAME"
           git add "$FILENAME"
           git commit -m "archive: update resume for $DATE"
