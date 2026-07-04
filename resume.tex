@@ -107,9 +107,8 @@
 
 
   \textbf{{\LARGE Govind Pandey}} & Email: \href{mailto:govindup63@gmail.com}{govindup63@gmail.com}\\
-  \underline{\href{https://www.govindpandey.xyz/}{Portfolio}} & \underline{\href{https://www.linkedin.com/in/govind-pandey-1611081b6/}{LinkedIn}} \\
-  \underline{\href{https://github.com/govindup63}{Github: govindup63}} & Mobile:~~~+91-935-104-4614\\
-  \underline{\href{https://linktr.ee/govindup63}{Linktree}}
+  \underline{\href{https://github.com/govindup63}{Github: govindup63}} & \underline{\href{https://www.linkedin.com/in/govind-pandey-1611081b6/}{LinkedIn}} \\
+  \underline{\href{https://linktr.ee/govindup63}{Linktree}} & Mobile:~~~+91-935-104-4614\\
 \end{tabular*}
 
 \section{Education}
@@ -125,7 +124,7 @@
  \begin{itemize}[leftmargin=0.15in, label={}]
     \small{\item{
      % \textbf{Languages}{: TypeScript, JavaScript, Golang, Python, C++}
-    \textbf{Languages}{: TypeScript, JavaScript, Python, C++}
+    \textbf{Languages}{: TypeScript, JavaScript, Python}
      
     \textbf{Technologies/Frameworks}{:  React, Next.js, Express, RestAPI}
 
@@ -141,9 +140,19 @@
 %-----------Experience-----------------
 \section{Experience}
 \resumeSubHeadingListStart
-\resumeSubheading
-{\href{https://www.remotestar.io/}{\underline{Remotestar}}}{March 2025 – Present}
-{Backend and DevOps Intern — Node.js, MongoDB, Pinecone, Kubernetes, Terraform}{Remote}
+\vspace{-6pt}
+\resumeProjectHeading
+{\textbf{Murena} $|$ \emph{DevOps Contractor} $|$ \emph{PostgreSQL, Restic, Terraform, Keycloak}}{February 2026 – Present}
+\resumeItemListStart
+  \item Built an automated \textbf{backup and disaster recovery system} with \textbf{Restic} and \textbf{pg\_dump} to S3, covering per-instance \textbf{PostgreSQL} databases and Nextcloud data directories, validated with a cross-platform restore.
+  \item Deployed \textbf{highly available PostgreSQL clusters} with \textbf{Autobase} (Patroni, etcd, HAProxy) on \textbf{Terraform}-provisioned Hetzner infrastructure.
+  \item Automated \textbf{Keycloak OIDC client provisioning} in the Nextcloud instance deployment pipeline via \textbf{GitLab CI}, enabling SSO for every new workspace instance.
+\resumeItemListEnd
+
+\vspace{-12pt}
+
+\resumeProjectHeading
+{\textbf{Remotestar} $|$ \emph{Backend and DevOps Intern} $|$ \emph{Node.js, MongoDB, Pinecone, Kubernetes}}{March 2025 – Present}
 \resumeItemListStart
   \item Built and deployed the entire backend architecture for a semantic search platform using \textbf{Node.js}, \textbf{Express}, and \textbf{MongoDB}.
   \item Designed and implemented a scalable \textbf{embedding-based search API} leveraging \textbf{Pinecone} vector database for similarity search across unstructured resume data.
@@ -160,9 +169,9 @@
 %-----------Volunteering-----------------
 \section{Volunteering}
 \resumeSubHeadingListStart
-\resumeSubheading
-{\href{https://www.pointblank.club/}{\underline{Point Blank (Coding Club)}}}{November 2024 -- Present}
-{DevOps Engineer — Kubernetes, Docker, Caddy, Nextjs, Firebase}{Member}
+\vspace{-6pt}
+\resumeProjectHeading
+{\textbf{Point Blank (Coding Club)} $|$ \emph{DevOps Engineer} $|$ \emph{Kubernetes, Docker, Caddy}}{November 2024 -- Present}
 \resumeItemListStart
   \item Deployed and Managed PBCTF 4.0 using Kubernetes, with {\textbf{Deployment}} for CTFd and {\textbf{StatefulSet}} for MySQL, supporting 200+ participants.
   \item Set up reverse proxy and HTTPS using \textbf{Caddy} with automated TLS and rate limiting.
@@ -188,7 +197,7 @@
 % \end{itemize}
 % }
 % \vspace{-10pt}
-\resumeSubItem{\textbf{Ghstmail.me} $|$ \emph{VPS, Node.js, PostgreSQL, MongoDB, Chrome Extension}
+\resumeSubItem{\textbf{Ghstmail.space} $|$ \emph{VPS, Node.js, PostgreSQL, MongoDB, Chrome Extension}
 $|$
 \textmd{\href{https://github.com/govindup63/Ghstmail.me}{\underline{Github}}}
 $|$
@@ -199,7 +208,6 @@ $|$
 \item Used \textbf{PostgreSQL} to manage aliases and \textbf{MongoDB} for user auth and dashboard operations.
 \item Built a \textbf{Chrome extension} for seamless dummy email creation and management on any site.
 \item Integrated \textbf{Postfix} for secure email forwarding from dummy addresses to original inboxes.
-\item Developed a dashboard for managing and deleting aliases to prevent spam or data breaches.
 \end{itemize}
 }
 \vspace{-10pt}
@@ -210,20 +218,8 @@ $|$
 \begin{itemize}
 \item Built a platform that functions like \textbf{Vercel for MCP servers}, allowing developers to deploy and serve MCP endpoints with a single configuration.
 \item Integrated \textbf{ArgoCD} for continuous delivery and \textbf{Kubernetes} for isolated containerized MCP deployments.
-\item Leveraged \textbf{KRO (Kube Resource Orchestrator)} to dynamically provision resources based on tenant configuration.
-\item Provided instant \textbf{public MCP endpoints} that plug directly into compatible MCP clients without additional setup.
-\end{itemize}
-}
-\vspace{-10pt}
-
-\resumeSubItem{\textbf{Dev.to MCP} $|$ \emph{Node.js, Dev.to API, Model Context Protocol (MCP)}
-$|$
-\textmd{\href{https://github.com/govindup63/Dev.to-MCP}{\underline{Github}}}
-}{
-\begin{itemize}
-\item Developed a tool that enables \textbf{direct publishing of articles to Dev.to} using the \textbf{Forem API}, integrated into an LLM-driven workflow.
-\item Leveraged the \textbf{Model Context Protocol (MCP)} to facilitate seamless communication between the LLM interface and Dev.to, simplifying the publishing process.
-\item Enhanced the efficiency of \textbf{content deployment} from model-generated outputs to live blogs with minimal manual intervention.
+\item Leveraged \textbf{KRO (Kube Resource Orchestrator)} to dynamically provision resources per tenant.
+\item Provided instant \textbf{public MCP endpoints} that plug directly into compatible MCP clients.
 \end{itemize}
 }
 \vspace{-10pt}
